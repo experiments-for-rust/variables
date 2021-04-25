@@ -17,4 +17,9 @@ fn main() {
     //let mut spaces = "   ";
     //spaces = spaces.len(); variable type changed, not allowed
 
+    let var:i32 = "42".parse().expect("Not a number");
+    //let var = "42".parse().expect("Not a number"); target type unknown
+
+    
+
 }
