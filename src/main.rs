@@ -19,7 +19,4 @@ fn main() {
 
     let var:i32 = "42".parse().expect("Not a number");
     //let var = "42".parse().expect("Not a number"); target type unknown
-
-    
-
 }
