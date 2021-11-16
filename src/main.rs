@@ -8,8 +8,11 @@ fn main() {
     const MAX: i32 = 100_000;
 
     let x = 5; //shadowing
+    println!("{}",x);
     let x = x + 1; //shadowing again
+    println!("{}",x);
     let x = x * 2;
+    println!("{}",x);
 
     let spaces = "   ";
     let spaces = spaces.len();
