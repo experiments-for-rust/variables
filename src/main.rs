@@ -22,8 +22,9 @@ fn main() {
     println!("string1={}",string1); //悔い改めて
     let string1=string1.len();
     println!("string1={} when the original variable is hidden",string1); //15 in unicode
-    let mut string2="いいよ来いよ";
+    //let mut string2="いいよ来いよ";
     //string2=string2.len(); data type error
+    let string2="いいよ来いよ";
     let string2_len=string2.len();
     println!("string2_len={}",string2_len);
 }
