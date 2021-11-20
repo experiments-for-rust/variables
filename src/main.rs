@@ -1,25 +1,29 @@
 fn main() {
-    //let x = 5;
-    let mut x = 5;
-    println!("{}",x);
-    x = 6;
-    println!("{}",x);
+    let a=5;
+    println!("a={}",a); //5
 
-    const MAX: i32 = 100_000;
+    let mut b=5;
+    println!("b={}",b); //5
+    b=6;
+    println!("b={} when assigned to a new value",b); //6
 
-    let x = 5; //shadowing
-    println!("{}",x);
-    let x = x + 1; //shadowing again
-    println!("{}",x);
-    let x = x * 2;
-    println!("{}",x);
+    const TADOKORO:i32=114514;
+    println!("YATTAZE! {}",TADOKORO);
 
-    let spaces = "   ";
-    let spaces = spaces.len();
+    let a=a+1; //shadowing
+    println!("a={} when the original variable is hidden",a); //6
+    {
+        let a=a*2;
+        println!("a={} when the original variable is hidden again",a); //12
+    }
+    println!("a={} when the secondary shadowing variable is wasted",a); //6
 
-    //let mut spaces = "   ";
-    //spaces = spaces.len(); variable type changed, not allowed
-
-    let var:i32 = "42".parse().expect("Not a number");
-    //let var = "42".parse().expect("Not a number"); target type unknown
+    let string1="悔い改めて";
+    println!("string1={}",string1); //悔い改めて
+    let string1=string1.len();
+    println!("string1={} when the original variable is hidden",string1); //15 in unicode
+    let mut string2="いいよ来いよ";
+    //string2=string2.len(); data type error
+    let string2_len=string2.len();
+    println!("string2_len={}",string2_len);
 }
